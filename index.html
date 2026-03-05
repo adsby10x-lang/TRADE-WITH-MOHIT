@@ -6,79 +6,116 @@
 
 <title>Trade With Mohit | Telegram Channel</title>
 
-<meta name="description" content="Join Trade With Mohit Telegram channel for daily market discussions and updates related to Nifty and Banknifty trading.">
+<meta name="description" content="Join Trade With Mohit Telegram channel for market discussions and updates related to Nifty and Banknifty.">
 
 <style>
 
-body{
+*{
 margin:0;
 padding:0;
+box-sizing:border-box;
 font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
 height:100vh;
 display:flex;
 align-items:center;
 justify-content:center;
 color:white;
+background:#06171d;
 overflow:hidden;
-background: linear-gradient(-45deg,#071c24,#0a2c38,#0f3f4f,#071c24);
-background-size:400% 400%;
-animation:gradientBG 12s ease infinite;
 }
 
-@keyframes gradientBG{
-0%{background-position:0% 50%}
-50%{background-position:100% 50%}
-100%{background-position:0% 50%}
+/* GRID LIKE TRADING SCREEN */
+
+body::before{
+content:"";
+position:absolute;
+width:100%;
+height:100%;
+background-image:
+linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+background-size:50px 50px;
+z-index:0;
 }
+
+/* ANIMATED CHART LINE */
+
+.chart{
+position:absolute;
+bottom:0;
+width:100%;
+height:40%;
+overflow:hidden;
+z-index:1;
+}
+
+.chart svg{
+width:200%;
+height:100%;
+animation:chartmove 12s linear infinite;
+}
+
+@keyframes chartmove{
+0%{transform:translateX(0)}
+100%{transform:translateX(-50%)}
+}
+
+/* CARD */
 
 .container{
+position:relative;
+z-index:2;
 text-align:center;
 padding:35px;
 max-width:420px;
 background:rgba(255,255,255,0.05);
-backdrop-filter:blur(10px);
-border-radius:15px;
-box-shadow:0 0 25px rgba(0,0,0,0.5);
+backdrop-filter:blur(12px);
+border-radius:16px;
+box-shadow:0 0 30px rgba(0,0,0,0.6);
 }
 
 .dp{
 width:120px;
 height:120px;
 border-radius:50%;
+border:3px solid #00c3ff;
 margin-bottom:20px;
-border:3px solid #00c2ff;
 object-fit:cover;
 }
 
 h1{
-margin:10px 0;
 font-size:30px;
+margin-bottom:10px;
 }
 
 p{
 font-size:15px;
-color:#c9d7de;
+color:#c7d4db;
 line-height:1.6;
 }
+
+/* BUTTON */
 
 .btn{
 display:inline-block;
 margin-top:30px;
-padding:18px 45px;
-background:#0088cc;
-color:white;
-font-size:20px;
-border-radius:10px;
-text-decoration:none;
+padding:20px 50px;
+font-size:22px;
 font-weight:bold;
+color:white;
+background:#0088cc;
+border-radius:12px;
+text-decoration:none;
 transition:0.3s;
-box-shadow:0 5px 20px rgba(0,136,204,0.5);
+box-shadow:0 8px 25px rgba(0,136,204,0.6);
 }
 
 .btn:hover{
 background:#00aaff;
 transform:scale(1.08);
-box-shadow:0 10px 30px rgba(0,170,255,0.7);
 }
 
 .footer{
@@ -92,6 +129,30 @@ color:#8aa1ac;
 
 <body>
 
+<div class="chart">
+<svg viewBox="0 0 1200 200" preserveAspectRatio="none">
+<polyline 
+fill="none"
+stroke="#00ff9d"
+stroke-width="3"
+points="
+0,150
+100,120
+200,140
+300,80
+400,100
+500,60
+600,90
+700,50
+800,70
+900,40
+1000,80
+1100,60
+1200,30
+"/>
+</svg>
+</div>
+
 <div class="container">
 
 <img src="IMG_20260305_144109_511.jpg" class="dp">
@@ -99,7 +160,7 @@ color:#8aa1ac;
 <h1>Trade With Mohit</h1>
 
 <p>
-Join our Telegram community for regular updates and discussions related to Nifty and Banknifty market movements.
+Join our Telegram community for discussions and updates related to Nifty and Banknifty market activity.
 </p>
 
 <a class="btn" href="https://t.me/+sk5eaVJvo5lhZTJl">
@@ -107,7 +168,7 @@ Join Free Telegram
 </a>
 
 <div class="footer">
-This channel is for educational and informational purposes only. Not financial advice.
+For educational and informational purposes only. Not financial advice.
 </div>
 
 </div>
